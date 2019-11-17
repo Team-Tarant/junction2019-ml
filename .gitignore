@@ -140,6 +140,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+**/.ipynb_checkpoints
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 
