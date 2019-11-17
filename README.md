@@ -1,4 +1,4 @@
-# junction2019 ML
+# Seikkai.ly ML
 
 Machine learning model & Python micro-service for estimating the visitor count at Nuuksio. Data is counter data from (https://www.dropbox.com/sh/4yz0jq2795cnwt7/AACaT8As6jL3q973FpFgNnIaa?dl=0)
 
