@@ -1,5 +1,6 @@
 import os
 import json
+import math
 
 from flask import Flask, send_from_directory, request
 
@@ -15,15 +16,8 @@ def predict():
     counter_id = request.args.get('counterId', None)
     result = ml.predict(ts, counter_id)
 
-    body = {'data': {'visitors': result}}
+    crowdedness = math.floor(max(min(6000, result), 600) / 600)
 
-    result = {
-        'statusCode': 200,
-        'headers': {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Credentials': True,
-        },
-        'body': json.dumps(body),
-    }
+    result = {'visitors': math.floor(result), 'crowdedness': crowdedness}
 
     return result
